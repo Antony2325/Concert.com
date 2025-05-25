@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Créer son propre spectacle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white ;
+    }
+
+    .logo i {
+      margin-right: 10px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .section-spectacle {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .section-spectacle video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .spectacle-content {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 50px 20px;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+
+    .spectacle-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e50914;
+      text-transform: uppercase;
+    }
+
+    .spectacle-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .spectacle-content a.btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #e50914;
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .spectacle-content a.btn:hover {
+      background-color: #b0060f;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 10px 10px 0 0;
+        display: inline-block;
+      }
+
+      .spectacle-content h2 {
+        font-size: 28px;
+      }
+
+      .spectacle-content p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-music"></i>Surplus Concert</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="evenement.html">Événements</a>
+      <a href="abonnement.html">Abonnement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section-spectacle">
+    <video autoplay muted loop>
+      <source src="video2.mp4" type="video/mp4" />
+      Votre navigateur ne prend pas en charge la vidéo.
+    </video>
+
+    <div class="spectacle-content">
+      <h2>Créer votre propre spectacle</h2>
+      <p>
+        Vous êtes artiste, organisateur ou passionné ? Avec Surplus Concert, créez votre événement de A à Z : choisissez le lieu, définissez l’ambiance, invitez vos talents, et laissez la magie opérer.
+      </p>
+      <p>
+        Notre équipe vous accompagne pour produire une expérience musicale inoubliable, personnalisée selon vos envies.
+      </p>
+      <a href="#" class="btn">Commencer maintenant</a>
+    </div>
+  </section>
+
+</body>
+</html>
